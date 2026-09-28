@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420">
+  <rect width="640" height="420" fill="#f6f1e8"/>
+  <g fill="#f7f3ea" stroke="#24302a" stroke-width="8">
+    <path d="M180 80 h90 l-18 150 h-54z" transform="rotate(-18 225 180)"/>
+    <path d="M370 80 h90 l-18 150 h-54z" transform="rotate(18 415 180)"/>
+  </g>
+  <path d="M250 150 h40 M350 150 h40" stroke="#c4a574" stroke-width="8"/>
+</svg>

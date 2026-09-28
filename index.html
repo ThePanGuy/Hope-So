@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hopeso</title>
+    <meta name="description" content="Hopeso serves drinks at weddings and events. The bar is the experience of the night.">
+    <link rel="icon" href="images/mark.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="index.html">Hopeso</a>
+      <nav class="nav" aria-label="Pages">
+        <a href="#about">About</a>
+        <a href="#bar">The bar</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <p class="eyebrow">Weddings and events</p>
+        <h1>The bar, for the night of the celebration.</h1>
+        <p class="lede">
+          Hopeso serves drinks at weddings and events. Guests come to the bar, stay for a while, and the evening gathers around it.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="gallery.html">See the gallery</a>
+          <a class="button button-quiet" href="#contact">Ask about a date</a>
+        </div>
+      </section>
+
+      <section id="about" class="panel">
+        <div class="section-heading">
+          <h2>About</h2>
+        </div>
+        <div class="prose">
+          <p>
+            Hopeso brings a bar to the event. The work is the service at that bar: what is poured, how the counter is set, and how guests are looked after from the first drink to the last.
+          </p>
+          <p>
+            It is for weddings and for other gatherings where the bar should feel like part of the room, not a side table in the corner.
+          </p>
+        </div>
+      </section>
+
+      <section id="bar" class="panel">
+        <div class="section-heading">
+          <h2>The bar</h2>
+          <p>What people come for is the experience at the bar itself.</p>
+        </div>
+        <dl class="facts">
+          <div>
+            <dt>Weddings</dt>
+            <dd>A bar set for the reception, staffed for the length of the celebration.</dd>
+          </div>
+          <div>
+            <dt>Events</dt>
+            <dd>The same bar for a private gathering, a party, or a night that needs a proper counter.</dd>
+          </div>
+          <div>
+            <dt>Service</dt>
+            <dd>Drinks made in front of the guests, at a bar they can stand at and return to.</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="contact" class="panel">
+        <div class="section-heading">
+          <h2>Ask about your event</h2>
+          <p>
+            Tell us the date and the kind of celebration. The message is sent from this page to the Hopeso inbox.
+          </p>
+        </div>
+        <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+          <input type="hidden" name="access_key" value="aaf60021-49c6-46b3-924b-5795cc60d198">
+          <input type="hidden" name="subject" value="Hopeso event enquiry">
+          <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="6" required placeholder="Date, place, and what kind of event it is."></textarea>
+          </label>
+          <button class="button" type="submit">Send message</button>
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Hopeso</p>
+      <p><span id="year"></span></p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
