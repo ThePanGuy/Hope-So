@@ -9,9 +9,9 @@
   --navy-line: #514983;
   --paper: #ffffff;
   --form: #edecf2;
-  --serif: "Playfair Display", Georgia, "Times New Roman", serif;
-  --body: "Merriweather", Georgia, serif;
-  --sans: "Montserrat", "Avenir Next", "Segoe UI", sans-serif;
+  --serif: "Noto Serif Display", Georgia, "Times New Roman", serif;
+  --body: "Literata", Georgia, serif;
+  --sans: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
 }
 
 *,
