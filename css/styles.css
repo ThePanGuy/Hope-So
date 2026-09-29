@@ -110,7 +110,7 @@ h2.dash::after {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 86px;
+  height: 104px;
   padding-left: 22px;
   background: #fff;
   box-shadow: 0 2px 13px rgba(0, 0, 0, 0.07);
@@ -125,37 +125,14 @@ h2.dash::after {
 .sticky-brand {
   display: flex;
   align-items: center;
-  gap: 12px;
-  color: var(--ink);
+  height: 100%;
+  padding: 8px 0;
   text-decoration: none;
 }
 
 .sticky-brand img {
-  width: 46px;
-  height: 46px;
-}
-
-.sticky-brand strong,
-.sticky-brand small {
-  display: block;
-}
-
-.sticky-brand strong {
-  font-family: var(--serif);
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.sticky-brand small {
-  margin-top: 2px;
-  color: var(--gold);
-  font-family: var(--sans);
-  font-size: 9px;
-  font-weight: 500;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+  width: auto;
+  height: 88px;
 }
 
 /* Hero */
@@ -192,46 +169,20 @@ h2.dash::after {
 .hero-chrome {
   position: relative;
   z-index: 2;
-  min-height: 220px;
 }
 
 .wordmark {
-  position: absolute;
-  top: 26px;
-  left: 50%;
+  position: relative;
   z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: min(420px, calc(100% - 180px));
-  color: #fff;
-  text-align: center;
+  display: block;
+  width: min(280px, calc(100% - 180px));
+  margin: 22px auto 0;
   text-decoration: none;
-  transform: translateX(-50%);
 }
 
 .wordmark img {
-  width: 78px;
-  height: 78px;
-}
-
-.wordmark-name {
-  margin-top: 8px;
-  font-family: var(--serif);
-  font-size: clamp(1.05rem, 2vw, 1.45rem);
-  font-weight: 600;
-  letter-spacing: 0.28em;
-  line-height: 1.15;
-  text-transform: uppercase;
-}
-
-.wordmark-tag {
-  margin-top: 6px;
-  font-family: var(--sans);
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.34em;
-  text-transform: uppercase;
+  width: 100%;
+  height: auto;
 }
 
 .rail-link,
@@ -277,7 +228,7 @@ h2.dash::after {
 .rail-btn-bar {
   position: static;
   width: 98px;
-  height: 86px;
+  height: 104px;
   border-left: 1px solid var(--line);
   color: var(--gold);
 }
@@ -291,11 +242,9 @@ h2.dash::after {
 }
 
 .hero-nav {
-  position: absolute;
-  top: 196px;
-  left: 0;
-  right: 0;
+  position: relative;
   z-index: 2;
+  margin-top: 18px;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   text-align: center;
@@ -373,12 +322,21 @@ h2.dash::after {
 }
 
 .overlay-brand {
-  color: #fff;
-  font-family: var(--serif);
-  font-size: 1.15rem;
-  letter-spacing: 0.18em;
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  margin: 16px 0;
+  background: #025121;
+  overflow: hidden;
   text-decoration: none;
-  text-transform: uppercase;
+}
+
+.overlay-brand img {
+  width: 68%;
+  height: auto;
 }
 
 .overlay-nav {
@@ -448,13 +406,18 @@ body.menu-open {
 }
 
 .split-copy h2 {
-  margin: 0 0 10px;
+  margin: 0 0 18px;
   font-family: var(--serif);
   font-size: clamp(2rem, 3vw, 2.4rem);
   font-style: italic;
   font-weight: 500;
   line-height: 1.15;
   text-shadow: 4px 4px 0 rgba(255, 255, 255, 0.17);
+}
+
+.split-copy h2 img {
+  width: min(250px, 100%);
+  height: auto;
 }
 
 .kicker,
@@ -527,9 +490,9 @@ body.menu-open {
 }
 
 .vision-mark {
-  width: 92px;
-  height: 92px;
-  margin: 8px auto 10px;
+  width: min(240px, 72%);
+  height: auto;
+  margin: 8px auto 18px;
 }
 
 .vision h2 {
@@ -1044,12 +1007,8 @@ button:focus-visible {
   }
 
   .wordmark {
-    top: 18px;
-  }
-
-  .wordmark img {
-    width: 62px;
-    height: 62px;
+    width: min(220px, calc(100% - 160px));
+    margin-top: 16px;
   }
 
   .hero-title {
@@ -1109,20 +1068,24 @@ button:focus-visible {
   }
 
   .wordmark {
-    width: min(260px, calc(100% - 150px));
+    width: min(190px, calc(100% - 156px));
   }
 
-  .wordmark-name {
-    letter-spacing: 0.14em;
+  .sticky-bar {
+    height: 84px;
   }
 
-  .wordmark-tag {
-    letter-spacing: 0.16em;
+  .sticky-brand img {
+    height: 68px;
   }
 
-  .sticky-brand small,
-  .wordmark-tag {
-    display: none;
+  .overlay-brand {
+    width: 120px;
+    height: 120px;
+  }
+
+  .rail-btn-bar {
+    height: 84px;
   }
 
   .overlay-top,
