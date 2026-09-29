@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 88" fill="none">
+  <circle cx="44" cy="44" r="41" stroke="#b2864d" stroke-width="1"/>
+  <circle cx="44" cy="44" r="34.5" stroke="#b2864d" stroke-width="0.6"/>
+  <path d="M44 10.5l1.7 5.1 5.3.1-4.3 3.2 1.6 5.1L44 21.1l-4.3 3-1.6-5.1-4.3-3.2 5.3-.1L44 10.5z" fill="#b2864d"/>
+  <path d="M44 72.2l1.2 3.5 3.6.1-2.9 2.2 1.1 3.5L44 79.4l-3 2.1-1.1-3.5-2.9-2.2 3.6-.1L44 72.2z" fill="#b2864d"/>
+  <path d="M18.2 44.8c6.2-9.4 16.4-14.6 25.8-14.6 9.5 0 19.7 5.2 25.8 14.6" stroke="#b2864d" stroke-width="0.7"/>
+  <path d="M20.4 49.2c5.6 8.2 15 12.8 23.6 12.8s18-4.6 23.6-12.8" stroke="#b2864d" stroke-width="0.7"/>
+  <text x="44" y="51" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" letter-spacing="1.5" fill="#b2864d">SS</text>
+</svg>
