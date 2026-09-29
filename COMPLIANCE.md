@@ -5,7 +5,7 @@ Practical checklist for running this site for a Greek audience. Not legal advice
 ## Current state of the site
 
 - Contact form posts name, email, message to **Web3Forms** (third-party processor).
-- No analytics, no tracking pixels, no cookies.
+- No analytics, no tracking pixels, no cookies. Language choice stored in `localStorage` (see §3).
 - Fonts self-hosted in `fonts/`: Noto Serif Display, Literata, Manrope (OFL, Latin + Greek).
 - Greek is the default language (root pages, `lang="el"`); English lives under `/en/`.
 
@@ -27,6 +27,7 @@ GDPR + Greek Law 4624/2019. A Privacy Policy page, in Greek (and English), stati
 
 ### 3. Cookies
 - [x] No cookies/trackers → no cookie banner needed today.
+- [x] The ΕΛ/EN choice is saved in `localStorage` (key `lang`) only when the visitor clicks the switcher. Strictly necessary for a feature the user asked for, so no consent needed — mention it in the Privacy Policy.
 - [ ] If Google Analytics, Meta Pixel, Instagram/YouTube embeds, etc. are added later: add a proper consent banner (Reject as easy as Accept, nothing loads before consent — per Greek DPA guidance).
 
 ### 4. Business identification (required for commercial sites)
