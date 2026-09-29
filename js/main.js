@@ -68,6 +68,22 @@ if (slides.length > 1) {
 const form = document.querySelector("#contact-form");
 const status = document.querySelector("#form-status");
 
+const messages = {
+  el: {
+    invalid: "Συμπληρώστε το όνομά σας, ένα έγκυρο email και ένα μήνυμα.",
+    sending: "Αποστολή…",
+    sent: "Το μήνυμά σας στάλθηκε. Θα σας απαντήσουμε με email.",
+    failed: "Το μήνυμα δεν στάλθηκε. Δοκιμάστε ξανά.",
+  },
+  en: {
+    invalid: "Add your name, a valid email, and a message.",
+    sending: "Sending…",
+    sent: "Your message was sent. We will reply by email.",
+    failed: "The message could not be sent. Please try again.",
+  },
+};
+const text = messages[document.documentElement.lang] || messages.en;
+
 form?.addEventListener("submit", async (event) => {
   event.preventDefault();
 
@@ -79,7 +95,7 @@ form?.addEventListener("submit", async (event) => {
 
   if (!name || !emailOk || !message || name.length > 120 || message.length > 4000) {
     if (status) {
-      status.textContent = "Add your name, a valid email, and a message.";
+      status.textContent = text.invalid;
     }
     return;
   }
@@ -89,7 +105,7 @@ form?.addEventListener("submit", async (event) => {
     button.disabled = true;
   }
   if (status) {
-    status.textContent = "Sending…";
+    status.textContent = text.sending;
   }
 
   try {
@@ -103,18 +119,26 @@ form?.addEventListener("submit", async (event) => {
     if (response.ok && result.success) {
       form.reset();
       if (status) {
-        status.textContent = "Your message was sent. We will reply by email.";
+        status.textContent = text.sent;
       }
     } else if (status) {
-      status.textContent = "The message could not be sent. Please try again.";
+      status.textContent = text.failed;
     }
   } catch {
     if (status) {
-      status.textContent = "The message could not be sent. Please try again.";
+      status.textContent = text.failed;
     }
   } finally {
     if (button) {
       button.disabled = false;
     }
   }
+});
+
+document.querySelectorAll("a[hreflang]").forEach((link) => {
+  link.addEventListener("click", () => {
+    try {
+      localStorage.setItem("lang", link.hreflang);
+    } catch {}
+  });
 });

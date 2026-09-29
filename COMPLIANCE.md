@@ -7,7 +7,7 @@ Practical checklist for running this site for a Greek audience. Not legal advice
 - Contact form posts name, email, message to **Web3Forms** (third-party processor).
 - No analytics, no tracking pixels, no cookies.
 - Fonts self-hosted in `fonts/`: Noto Serif Display, Literata, Manrope (OFL, Latin + Greek).
-- Content is English only (`lang="en"`).
+- Greek is the default language (root pages, `lang="el"`); English lives under `/en/`.
 
 ## Checklist
 
@@ -39,6 +39,7 @@ Greek e-commerce law (Π.Δ. 131/2003). Visible in the footer or on a «Στοι
 - [ ] Any prices shown include VAT (ΦΠΑ)
 
 ### 5. Greek language
+- [x] Site content available in Greek (root) with English under `/en/`.
 - [ ] Key information (terms, prices, privacy policy) available in Greek (consumer law Ν. 2251/1994). A Greek or bilingual EL/EN version also helps local SEO.
 
 ### 6. Alcohol-related
