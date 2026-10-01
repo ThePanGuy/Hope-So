@@ -22,6 +22,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 104px;
 }
 
 body {
@@ -1069,6 +1070,10 @@ button:focus-visible {
 
   .wordmark {
     width: min(190px, calc(100% - 156px));
+  }
+
+  html {
+    scroll-padding-top: 84px;
   }
 
   .sticky-bar {
