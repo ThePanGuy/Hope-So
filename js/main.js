@@ -68,6 +68,17 @@ if (slides.length > 1) {
 const form = document.querySelector("#contact-form");
 const status = document.querySelector("#form-status");
 
+const requested = new URLSearchParams(window.location.search).get("format");
+const formatField = form?.querySelector("select[name=format]");
+if (requested && formatField) {
+  const match = [...formatField.options].find(
+    (option) => option.value.toLowerCase() === requested.toLowerCase()
+  );
+  if (match) {
+    formatField.value = match.value;
+  }
+}
+
 form?.addEventListener("submit", async (event) => {
   event.preventDefault();
 

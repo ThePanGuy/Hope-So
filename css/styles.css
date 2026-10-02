@@ -167,6 +167,20 @@ h2.dash::after {
   filter: grayscale(1) contrast(1.05);
 }
 
+.hero-photo-services {
+  background:
+    linear-gradient(to bottom, rgba(16, 14, 22, 0.62) 0%, rgba(16, 14, 22, 0.16) 46%, rgba(16, 14, 22, 0.45) 100%),
+    url("../images/samples/bar.jpg") center / cover no-repeat;
+  filter: grayscale(1) contrast(1.05);
+}
+
+.hero-photo-contact {
+  background:
+    linear-gradient(to bottom, rgba(16, 14, 22, 0.62) 0%, rgba(16, 14, 22, 0.16) 46%, rgba(16, 14, 22, 0.45) 100%),
+    url("../images/samples/evening.jpg") center / cover no-repeat;
+  filter: grayscale(1) contrast(1.05);
+}
+
 .hero-chrome {
   position: relative;
   z-index: 2;
@@ -597,6 +611,17 @@ body.menu-open {
   background: var(--plum);
 }
 
+.offer-grid a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.offer-grid a:hover h3,
+.offer-grid a:focus-visible h3 {
+  color: var(--gold);
+}
+
 .offer-grid h3 {
   margin: 0 0 14px;
   color: #fff;
@@ -825,6 +850,36 @@ body.menu-open {
   font-size: 16px;
 }
 
+.contact-notes {
+  display: grid;
+  gap: 8px;
+  max-width: 38rem;
+  margin: 0 auto 32px;
+  padding: 0;
+  color: var(--muted);
+  font-size: 15px;
+  font-style: italic;
+  list-style: none;
+}
+
+.contact-form select {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--ink);
+  border-radius: 0;
+  background: transparent;
+  color: var(--gold);
+  font-family: var(--body);
+  font-size: 18px;
+  font-weight: 300;
+  padding: 0.45rem 0 0.55rem;
+}
+
+.contact-form select:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
 .contact-form {
   display: grid;
   gap: 1.15rem;
@@ -958,7 +1013,7 @@ button:focus-visible {
 
 .footer-nav {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 1px;
   background: var(--line);
   border-top: 1px solid var(--line);
