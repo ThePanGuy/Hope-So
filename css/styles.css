@@ -1592,36 +1592,119 @@ button:focus-visible {
   letter-spacing: 0.04em;
 }
 
-.welcome-copy {
+#intro-title {
+  color: var(--banana);
+  text-shadow: 2px 2px 0 #000;
+}
+
+/* Home hero: the brochure photo on green */
+
+.hero-intro {
+  background: var(--green);
+}
+
+/* The photo is the 960x1080 brochure slide, green and gold line included.
+   The box keeps that ratio so the clip follows the line in the picture. */
+.hero-slant {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  background: var(--gold);
+  clip-path: polygon(0 0, 77.2% 0, 100% 100%, 0 100%);
+}
+
+.hero-slant img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+  clip-path: polygon(0 0, 76.8% 0, 99.6% 100%, 0 100%);
+}
+
+/* keeps the white nav legible where it crosses the bright photo */
+.hero-slant::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(1, 29, 12, 0.7) 0%, rgba(1, 29, 12, 0) 45%);
+  pointer-events: none;
+}
+
+.hero-intro .scroll-cue {
+  left: 76%;
+}
+
+.hero-intro .hero-copy {
+  left: 52%;
+  right: 6%;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  text-align: center;
+  justify-content: center;
+  top: 330px;
+  padding-bottom: 60px;
 }
 
-.welcome-mark {
-  width: min(300px, 80%);
-  height: auto;
+.hero-intro .hero-eyebrow,
+.hero-intro .hero-sub {
+  text-shadow: none;
 }
 
-.slant-copy .welcome-question {
+.hero-intro .hero-title {
   display: grid;
-  margin-top: 56px;
-  font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+  font-size: clamp(1.8rem, 3.2vw, 2.9rem);
+  font-style: italic;
+  font-weight: 500;
   letter-spacing: 0.06em;
   line-height: 1.5;
   text-shadow: none;
 }
 
-.welcome-question span:nth-child(1) {
+.hero-intro .hero-title span:nth-child(1) {
   justify-self: start;
 }
 
-.welcome-question span:nth-child(3) {
+.hero-intro .hero-title span:nth-child(3) {
   justify-self: end;
 }
 
-#intro-title {
-  color: var(--banana);
-  text-shadow: 2px 2px 0 #000;
+/* Narrow screens: no room for two columns, so the photo sits behind the copy */
+@media (max-width: 900px) {
+  .hero-slant,
+  .hero-slant img {
+    clip-path: none;
+  }
+
+  .hero-slant {
+    width: 100%;
+  }
+
+  .hero-slant img {
+    object-position: 30% center;
+  }
+
+  .hero-slant::after {
+    background: linear-gradient(to bottom, rgba(1, 29, 12, 0.7) 0%, rgba(1, 29, 12, 0.5) 45%, rgba(1, 29, 12, 0.78) 100%);
+  }
+
+  .hero-intro .scroll-cue {
+    left: 50%;
+  }
+
+  .hero-intro .hero-copy {
+    top: auto;
+    right: 8%;
+    bottom: 70px;
+    left: 8%;
+    padding-bottom: 0;
+  }
+
+  .hero-intro .hero-title span:nth-child(n) {
+    justify-self: center;
+  }
 }
 
 /* Brochure: three levels */
@@ -1674,10 +1757,6 @@ button:focus-visible {
   .slant-copy {
     max-width: none;
     padding: 40px 22px 64px;
-  }
-
-  .slant-copy .welcome-question {
-    margin-top: 36px;
   }
 }
 
