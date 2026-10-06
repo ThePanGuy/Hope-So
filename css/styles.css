@@ -503,7 +503,7 @@ section.band .levels-echo {
   font-style: italic;
   font-weight: 500;
   line-height: 1.15;
-  text-shadow: 4px 4px 0 rgba(255, 255, 255, 0.17);
+  text-shadow: 2px 2px 0 #000;
 }
 
 .split-copy h2 img {
@@ -594,7 +594,7 @@ section.band .levels-echo {
   font-style: italic;
   font-weight: 500;
   line-height: 1.1;
-  text-shadow: 4px 4px 0 rgba(255, 255, 255, 0.17);
+  text-shadow: 2px 2px 0 #000;
 }
 
 .vision h2.dash::after {
@@ -652,7 +652,7 @@ section.band .levels-echo {
   font-style: italic;
   font-weight: 500;
   line-height: 1;
-  text-shadow: 4px 4px 0 rgba(255, 255, 255, 0.17);
+  text-shadow: 2px 2px 0 #000;
   transform: translateY(-58%);
 }
 
@@ -731,7 +731,7 @@ section.band .levels-echo {
   font-weight: 500;
   letter-spacing: 0.08em;
   line-height: 1.2;
-  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.06);
+  text-shadow: 2px 2px 0 #000;
 }
 
 .line-viewport {
@@ -1566,7 +1566,7 @@ button:focus-visible {
   font-style: italic;
   font-weight: 500;
   line-height: 1.15;
-  text-shadow: 4px 4px 0 rgba(255, 255, 255, 0.17);
+  text-shadow: 2px 2px 0 #000;
 }
 
 .slant-copy h2.dash::after {
@@ -1617,6 +1617,11 @@ button:focus-visible {
 
 .welcome-question span:nth-child(3) {
   justify-self: end;
+}
+
+#intro-title {
+  color: var(--banana);
+  text-shadow: 2px 2px 0 #000;
 }
 
 /* Brochure: three levels */
