@@ -68,6 +68,17 @@ if (slides.length > 1) {
 const form = document.querySelector("#contact-form");
 const status = document.querySelector("#form-status");
 
+const requested = new URLSearchParams(window.location.search).get("format");
+const formatField = form?.querySelector("select[name=format]");
+if (requested && formatField) {
+  const match = [...formatField.options].find(
+    (option) => option.value.toLowerCase() === requested.toLowerCase()
+  );
+  if (match) {
+    formatField.value = match.value;
+  }
+}
+
 form?.addEventListener("submit", async (event) => {
   event.preventDefault();
 
@@ -118,3 +129,18 @@ form?.addEventListener("submit", async (event) => {
     }
   }
 });
+
+const revealItems = document.querySelectorAll(".reveal");
+if ("IntersectionObserver" in window && revealItems.length) {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-in");
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealItems.forEach((item) => io.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add("is-in"));
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact — The Sip Society</title>
+    <meta name="description" content="Ask The Sip Society about your wedding or event. Send the date, venue and guest count and we reply by email, usually within 24 hours.">
+    <meta name="theme-color" content="#b2864d">
+    <link rel="icon" href="images/mark.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <a class="skip" href="#contact">Skip to the form</a>
+
+    <header class="sticky-bar">
+      <a class="sticky-brand" href="index.html">
+        <img src="images/logo-ink.png" alt="The Sip Society" width="517" height="297">
+      </a>
+      <button class="rail-btn rail-btn-bar" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-menu">
+        <svg viewBox="0 0 24 16" aria-hidden="true"><path d="M0 1h24M0 8h24M0 15h24" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        <span>Menu</span>
+      </button>
+    </header>
+
+    <div class="overlay-menu" id="site-menu" hidden>
+      <div class="overlay-top">
+        <a class="overlay-brand" href="index.html"><img src="images/logo-word.png" alt="The Sip Society" width="397" height="323"></a>
+        <button class="rail-btn rail-btn-close" type="button" data-menu-toggle aria-label="Close menu">
+          <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M1 1l16 16M17 1L1 17" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+          <span>Close</span>
+        </button>
+      </div>
+      <nav class="overlay-nav" aria-label="Menu">
+        <a href="index.html#about">About</a>
+        <a href="index.html#bar">The bar</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+
+    <header class="hero hero-short">
+      <div class="hero-photo hero-photo-contact" role="img" aria-label="Sample photograph of guests raising glasses"></div>
+      <div class="hero-chrome">
+        <a class="wordmark" href="index.html">
+          <img src="images/logo-word.png" alt="The Sip Society, tailor-made bar services" width="397" height="323">
+        </a>
+        <button class="rail-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-menu">
+          <svg viewBox="0 0 24 16" aria-hidden="true"><path d="M0 1h24M0 8h24M0 15h24" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+          <span>Menu</span>
+        </button>
+        <nav class="hero-nav" aria-label="Pages">
+          <a href="index.html#about">About</a>
+          <a href="index.html#bar">The bar</a>
+          <a href="services.html">Services</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html" aria-current="page">Contact</a>
+        </nav>
+      </div>
+      <h1 class="hero-title">Ask about your event.</h1>
+      <a class="scroll-cue" href="#contact">
+        <span class="visually-hidden">Scroll</span>
+      </a>
+    </header>
+
+    <main>
+      <section class="contact-band" id="contact">
+        <div class="contact-inner">
+          <h2 class="dash">Check your date</h2>
+          <p class="contact-lead">
+            Tell us the date, venue and guest count. We reply by email, usually within 24 hours, and can arrange a tasting while the menu takes shape.
+          </p>
+          <ul class="contact-notes">
+            <li>Every bar is built to the event, so there are no fixed packages to pick from.</li>
+            <li>Not sure which format fits? Leave it open and we will suggest one.</li>
+            <li>A tasting can be arranged while the menu takes shape.</li>
+          </ul>
+          <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <input type="hidden" name="access_key" value="aaf60021-49c6-46b3-924b-5795cc60d198">
+            <input type="hidden" name="subject" value="The Sip Society event enquiry">
+            <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <label>
+              Name
+              <input type="text" name="name" autocomplete="name" required maxlength="120">
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" autocomplete="email" required maxlength="180">
+            </label>
+            <label>
+              Event date
+              <input type="date" name="event_date">
+            </label>
+            <label>
+              Guests (approx.)
+              <input type="number" name="guests" min="1" max="2000" inputmode="numeric">
+            </label>
+            <label>
+              Format
+              <select name="format">
+                <option value="">Not sure yet</option>
+                <option value="Intimate">Intimate</option>
+                <option value="Signature">Signature</option>
+                <option value="Full experience">Full experience</option>
+              </select>
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="6" required maxlength="4000" placeholder="Venue, the kind of event, and anything you have in mind."></textarea>
+            </label>
+            <button class="pill pill-quiet" type="submit">Check my date</button>
+            <p class="form-status" id="form-status" role="status"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html#about"><strong>About</strong><span>The bar we bring to the night</span></a>
+        <a href="index.html#bar"><strong>The bar</strong><span>Weddings, events, and service</span></a>
+        <a href="services.html"><strong>Services</strong><span>What is offered, and the options</span></a>
+        <a href="gallery.html"><strong>Gallery</strong><span>Photographs from the counter</span></a>
+        <a href="contact.html" aria-current="page"><strong>Contact</strong><span>Ask about a date</span></a>
+      </nav>
+      <div class="footer-meta">
+        <p>The Sip Society</p>
+        <p><a href="index.html">Back to the main page</a></p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
