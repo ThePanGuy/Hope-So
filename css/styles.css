@@ -4,11 +4,12 @@
   --ink: #2a2a31;
   --muted: #7f7f83;
   --line: #e5e5e6;
-  --plum: #241e2d;
-  --navy: #140958;
-  --navy-line: #514983;
+  --plum: #011d0c;
+  --green: #013916;
+  --green-line: #4f7a60;
   --paper: #ffffff;
   --form: #edecf2;
+  --banana: #ffe5b3;
   --serif: "Playfair Display", Georgia, "Times New Roman", serif;
   --body: "Merriweather", Georgia, serif;
   --sans: "Montserrat", "Avenir Next", "Segoe UI", sans-serif;
@@ -167,6 +168,20 @@ h2.dash::after {
   filter: grayscale(1) contrast(1.05);
 }
 
+.hero-photo-services {
+  background:
+    linear-gradient(to bottom, rgba(16, 14, 22, 0.62) 0%, rgba(16, 14, 22, 0.16) 46%, rgba(16, 14, 22, 0.45) 100%),
+    url("../images/samples/bar.jpg") center / cover no-repeat;
+  filter: grayscale(1) contrast(1.05);
+}
+
+.hero-photo-contact {
+  background:
+    linear-gradient(to bottom, rgba(16, 14, 22, 0.62) 0%, rgba(16, 14, 22, 0.16) 46%, rgba(16, 14, 22, 0.45) 100%),
+    url("../images/samples/evening.jpg") center / cover no-repeat;
+  filter: grayscale(1) contrast(1.05);
+}
+
 .hero-chrome {
   position: relative;
   z-index: 2;
@@ -231,15 +246,15 @@ h2.dash::after {
   width: 98px;
   height: 104px;
   border-left: 1px solid var(--line);
-  color: var(--gold);
+  color: var(--green);
 }
 
 .rail-btn-close {
   position: static;
   width: 98px;
   height: 98px;
-  border-left: 1px solid #4a4a50;
-  color: var(--gold);
+  border-left: 1px solid var(--banana);
+  color: var(--banana);
 }
 
 .hero-nav {
@@ -305,7 +320,7 @@ h2.dash::after {
   inset: 0;
   z-index: 40;
   overflow: auto;
-  background: var(--ink);
+  background: var(--plum);
   color: #fff;
 }
 
@@ -319,7 +334,7 @@ h2.dash::after {
   justify-content: space-between;
   min-height: 98px;
   padding-left: 40px;
-  border-bottom: 1px solid #4a4a50;
+  border-bottom: 1px solid var(--banana);
 }
 
 .overlay-brand {
@@ -330,7 +345,7 @@ h2.dash::after {
   height: 168px;
   border-radius: 50%;
   margin: 16px 0;
-  background: #025121;
+  background: var(--green);
   overflow: hidden;
   text-decoration: none;
 }
@@ -367,6 +382,80 @@ body.menu-open {
   overflow: hidden;
 }
 
+/* Alternating bands (home page): green sections use banana, plum sections
+   use gold. Headers and subheaders stay white. */
+
+section.band-green {
+  --band-bg: var(--green);
+  --band-fg: var(--banana);
+}
+
+section.band-plum {
+  --band-bg: var(--plum);
+  --band-fg: var(--gold);
+}
+
+section.band {
+  background: var(--band-bg);
+  color: var(--band-fg);
+}
+
+section.band h2,
+section.band h3,
+section.band .kicker,
+section.band .vision-kicker,
+section.band .offer-kicker,
+section.band .preview-kicker {
+  color: #fff;
+}
+
+section.band .more,
+section.band .more-dark {
+  border-color: var(--band-fg);
+  color: var(--band-fg);
+}
+
+section.band .more:hover,
+section.band .more:focus-visible {
+  background: var(--band-fg);
+  color: var(--band-bg);
+}
+
+section.band .dash::after {
+  background: var(--band-fg);
+}
+
+section.band .split-photo::after,
+section.band .vision-frame,
+section.band .offer-frame,
+section.band .levels-frame {
+  border-color: var(--band-fg);
+}
+
+section.band .slant-photo {
+  background: var(--band-fg);
+}
+
+section.band .offer-grid {
+  background: var(--band-fg);
+}
+
+section.band .offer-grid li,
+.offer.band h2 span {
+  background: var(--band-bg);
+}
+
+section.band .offer-grid p,
+section.band .line-slide,
+section.band .line-controls button,
+section.band .preview-grid a {
+  color: var(--band-fg);
+}
+
+section.band .levels-echo {
+  color: rgba(255, 255, 255, 0.12);
+}
+
 /* Split feature */
 
 .split {
@@ -374,7 +463,7 @@ body.menu-open {
   grid-template-columns: minmax(0, 1fr) minmax(300px, 480px);
   min-height: 680px;
   padding-inline: max(0px, calc((100% - 1100px) / 2));
-  background: var(--ink);
+  background: var(--plum);
   color: #fff;
 }
 
@@ -414,7 +503,7 @@ body.menu-open {
   font-style: italic;
   font-weight: 500;
   line-height: 1.15;
-  text-shadow: 4px 4px 0 rgba(255, 255, 255, 0.17);
+  text-shadow: 2px 2px 0 #000;
 }
 
 .split-copy h2 img {
@@ -475,11 +564,11 @@ body.menu-open {
   margin: 8px auto 0;
 }
 
-/* Navy vision */
+/* Green vision */
 
 .vision {
   padding: 36px;
-  background: var(--navy);
+  background: var(--green);
   color: #fff;
 }
 
@@ -487,7 +576,7 @@ body.menu-open {
   max-width: 760px;
   margin: 0 auto;
   padding: 48px 28px 56px;
-  border: 1px solid var(--navy-line);
+  border: 1px solid var(--gold);
   text-align: center;
 }
 
@@ -505,7 +594,7 @@ body.menu-open {
   font-style: italic;
   font-weight: 500;
   line-height: 1.1;
-  text-shadow: 4px 4px 0 rgba(255, 255, 255, 0.17);
+  text-shadow: 2px 2px 0 #000;
 }
 
 .vision h2.dash::after {
@@ -563,7 +652,7 @@ body.menu-open {
   font-style: italic;
   font-weight: 500;
   line-height: 1;
-  text-shadow: 4px 4px 0 rgba(255, 255, 255, 0.17);
+  text-shadow: 2px 2px 0 #000;
   transform: translateY(-58%);
 }
 
@@ -595,6 +684,17 @@ body.menu-open {
 .offer-grid li {
   padding: 36px 26px 42px;
   background: var(--plum);
+}
+
+.offer-grid a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.offer-grid a:hover h3,
+.offer-grid a:focus-visible h3 {
+  color: var(--gold);
 }
 
 .offer-grid h3 {
@@ -631,7 +731,7 @@ body.menu-open {
   font-weight: 500;
   letter-spacing: 0.08em;
   line-height: 1.2;
-  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.06);
+  text-shadow: 2px 2px 0 #000;
 }
 
 .line-viewport {
@@ -825,6 +925,36 @@ body.menu-open {
   font-size: 16px;
 }
 
+.contact-notes {
+  display: grid;
+  gap: 8px;
+  max-width: 38rem;
+  margin: 0 auto 32px;
+  padding: 0;
+  color: var(--muted);
+  font-size: 15px;
+  font-style: italic;
+  list-style: none;
+}
+
+.contact-form select {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--ink);
+  border-radius: 0;
+  background: transparent;
+  color: var(--gold);
+  font-family: var(--body);
+  font-size: 18px;
+  font-weight: 300;
+  padding: 0.45rem 0 0.55rem;
+}
+
+.contact-form select:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
 .contact-form {
   display: grid;
   gap: 1.15rem;
@@ -958,7 +1088,7 @@ button:focus-visible {
 
 .footer-nav {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 1px;
   background: var(--line);
   border-top: 1px solid var(--line);
@@ -1168,7 +1298,7 @@ button:focus-visible {
   margin-right: 22px;
   padding: 0.7rem 1.4rem;
   border-radius: 24px;
-  background: var(--gold);
+  background: var(--green);
   color: #fff;
   font-family: var(--sans);
   font-size: 12px;
@@ -1394,5 +1524,174 @@ button:focus-visible {
   .sticky-cta {
     padding: 0.6rem 1rem;
     font-size: 11px;
+  }
+}
+
+/* Brochure: slanted photo + green copy */
+
+.slant {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  background: var(--green);
+  color: #fff;
+}
+
+/* The image is the photo half of the brochure slide (960x1080), shown at its
+   own aspect ratio; the slant follows the brochure's gold line. */
+.slant-photo {
+  background: var(--gold);
+  clip-path: polygon(0 0, 77.2% 0, 100% 100%, 0 100%);
+}
+
+.slant-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+  clip-path: polygon(0 0, 76.8% 0, 99.6% 100%, 0 100%);
+}
+
+.slant-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: calc(34rem + 112px);
+  padding: 72px 56px;
+}
+
+.slant-copy h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.4vw, 2.8rem);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.15;
+  text-shadow: 2px 2px 0 #000;
+}
+
+.slant-copy h2.dash::after {
+  margin-inline: 0;
+}
+
+.slant-copy p {
+  margin: 0;
+  padding-top: 28px;
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+.slant-copy strong {
+  font-style: normal;
+  font-weight: 400;
+}
+
+.slant-copy .slant-signoff {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
+}
+
+.welcome-copy {
+  align-items: center;
+  text-align: center;
+}
+
+.welcome-mark {
+  width: min(300px, 80%);
+  height: auto;
+}
+
+.slant-copy .welcome-question {
+  display: grid;
+  margin-top: 56px;
+  font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+  text-shadow: none;
+}
+
+.welcome-question span:nth-child(1) {
+  justify-self: start;
+}
+
+.welcome-question span:nth-child(3) {
+  justify-self: end;
+}
+
+#intro-title {
+  color: var(--banana);
+  text-shadow: 2px 2px 0 #000;
+}
+
+/* Brochure: three levels */
+
+.levels {
+  padding: 56px 36px;
+  background: var(--green);
+  color: #fff;
+}
+
+.levels-frame {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 96px 28px 88px;
+  border: 8px solid var(--gold);
+  text-align: center;
+}
+
+.levels-stack h2,
+.levels-echo {
+  display: block;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.12;
+}
+
+.levels-echo {
+  color: rgba(255, 255, 255, 0.12);
+  user-select: none;
+}
+
+.levels .more {
+  margin: 44px auto 0;
+  color: var(--gold);
+}
+
+.levels .more:hover,
+.levels .more:focus-visible {
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .slant {
+    grid-template-columns: 1fr;
+  }
+
+  .slant-copy {
+    max-width: none;
+    padding: 40px 22px 64px;
+  }
+
+  .slant-copy .welcome-question {
+    margin-top: 36px;
+  }
+}
+
+@media (max-width: 620px) {
+  .levels {
+    padding: 22px;
+  }
+
+  .levels-frame {
+    padding: 64px 18px 56px;
+    border-width: 5px;
+  }
+
+  .levels-echo {
+    display: none;
   }
 }
