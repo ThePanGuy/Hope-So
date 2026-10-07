@@ -7,9 +7,7 @@
     <meta name="description" content="Ask The Sip Society about your wedding or event. Send the date, venue and guest count and we reply by email, usually within 24 hours.">
     <meta name="theme-color" content="#b2864d">
     <link rel="icon" href="images/mark.svg" type="image/svg+xml">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/styles.css">
     <!-- TODO: telephone is a placeholder; add "url" and "image" once the domain is live -->
     <script type="application/ld+json">
@@ -130,6 +128,7 @@
               <textarea name="message" rows="6" required maxlength="4000" placeholder="Venue, the kind of event, and anything you have in mind."></textarea>
             </label>
             <button class="pill pill-quiet" type="submit">Check my date</button>
+            <p class="form-privacy">We use your details only to reply to your enquiry and, if you book, to plan your event. See our <a href="privacy.html">privacy policy</a>.</p>
             <p class="form-status" id="form-status" role="status"></p>
           </form>
           <div class="contact-direct">
@@ -182,7 +181,7 @@
         </nav>
       </div>
       <div class="footer-meta">
-        <p>&copy; <span id="year">2026</span> Sip Society</p>
+        <p>&copy; <span id="year">2026</span> Sip Society <span aria-hidden="true">&middot;</span> <a href="privacy.html">Privacy</a></p>
         <a href="#top">Back to top</a>
       </div>
     </footer>
