@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
   </head>
-  <body>
+  <body id="top">
     <a class="skip" href="#gallery">Skip to gallery</a>
 
     <header class="sticky-bar">
@@ -134,26 +134,41 @@
         <h2>planning a celebration?</h2>
         <a class="pill" href="contact.html">Check your date</a>
       </div>
-      <nav class="footer-nav" aria-label="Footer">
-        <a href="index.html#about"><strong>About</strong><span>The bar we bring to the night</span></a>
-        <a href="index.html#bar"><strong>The bar</strong><span>Weddings, events, and service</span></a>
-        <a href="services.html"><strong>Services</strong><span>What is offered, and the options</span></a>
-        <a href="gallery.html" aria-current="page"><strong>Gallery</strong><span>Photographs from the counter</span></a>
-        <a href="contact.html"><strong>Contact</strong><span>Ask about a date</span></a>
-      </nav>
-      <div class="footer-contact">
-        <ul class="contact-links">
-          <li class="contact-email"><a href="mailto:pantelisnikolidakis@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="1.5"/><path d="M3 6l9 7 9-7"/></svg><span>pantelisnikolidakis@gmail.com</span></a></li>
-          <!-- TODO: placeholder phone and WhatsApp numbers, replace with the real ones -->
-          <li><a href="tel:+306900000000"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5h-2a1.5 1.5 0 0 0-1.5 1.6c.6 8.2 7.6 15.2 15.8 15.8a1.5 1.5 0 0 0 1.6-1.5v-2.2a1 1 0 0 0-.8-1l-3.5-.9a1 1 0 0 0-1 .3l-1.4 1.5a12 12 0 0 1-5.4-5.4l1.5-1.4a1 1 0 0 0 .3-1l-.9-3.5a1 1 0 0 0-1-.8z"/></svg><span>+30 690 000 0000</span></a></li>
-          <li><a href="https://wa.me/306900000000" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-4A8.5 8.5 0 1 1 8.4 19z"/><path d="M9.2 8.6c.3-.4.7-.4.9 0l.6 1.3c.1.3 0 .5-.2.7l-.4.4a5 5 0 0 0 2.9 2.9l.4-.4c.2-.2.4-.3.7-.2l1.3.6c.4.2.4.6 0 .9-.6.6-1.4.8-2.2.5a7.5 7.5 0 0 1-4.5-4.5c-.3-.8-.1-1.6.5-2.2z"/></svg><span>WhatsApp</span></a></li>
-          <li><a href="https://www.instagram.com/pantelisnikolidakis/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6"/></svg><span>Instagram</span></a></li>
-          <li><a href="https://www.facebook.com/share/1DG5RxUV88/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.5V4.4a20 20 0 0 0-2.3-.1c-2.3 0-3.8 1.4-3.8 3.9v2.3H9v3h2.5V21"/></svg><span>Facebook</span></a></li>
-        </ul>
-        <p class="footer-area">Weddings and private events across Greece</p>
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="index.html"><img src="images/logo-word.png" alt="The Sip Society" width="397" height="323" loading="lazy"></a>
+          <p>Tailor-made bar and cocktail service for weddings and private events across Greece.</p>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-label">Get in touch</h2>
+          <ul class="footer-contact">
+            <li><a href="mailto:pantelisnikolidakis@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="1.5"/><path d="M3 6l9 7 9-7"/></svg><span>pantelisnikolidakis@gmail.com</span></a></li>
+            <!-- TODO: placeholder phone and WhatsApp numbers, replace with the real ones -->
+            <li><a href="tel:+306900000000"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5h-2a1.5 1.5 0 0 0-1.5 1.6c.6 8.2 7.6 15.2 15.8 15.8a1.5 1.5 0 0 0 1.6-1.5v-2.2a1 1 0 0 0-.8-1l-3.5-.9a1 1 0 0 0-1 .3l-1.4 1.5a12 12 0 0 1-5.4-5.4l1.5-1.4a1 1 0 0 0 .3-1l-.9-3.5a1 1 0 0 0-1-.8z"/></svg><span>+30 690 000 0000</span></a></li>
+            <li><a href="https://wa.me/306900000000" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-4A8.5 8.5 0 1 1 8.4 19z"/><path d="M9.2 8.6c.3-.4.7-.4.9 0l.6 1.3c.1.3 0 .5-.2.7l-.4.4a5 5 0 0 0 2.9 2.9l.4-.4c.2-.2.4-.3.7-.2l1.3.6c.4.2.4.6 0 .9-.6.6-1.4.8-2.2.5a7.5 7.5 0 0 1-4.5-4.5c-.3-.8-.1-1.6.5-2.2z"/></svg><span>WhatsApp</span></a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-label">Follow</h2>
+          <ul class="footer-social">
+            <li><a href="https://www.instagram.com/pantelisnikolidakis/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6"/></svg></a></li>
+            <li><a href="https://www.facebook.com/share/1DG5RxUV88/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.5V4.4a20 20 0 0 0-2.3-.1c-2.3 0-3.8 1.4-3.8 3.9v2.3H9v3h2.5V21"/></svg></a></li>
+          </ul>
+        </div>
+        <nav class="footer-col footer-nav" aria-label="Footer">
+          <h2 class="footer-label">Explore</h2>
+          <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#bar">The bar</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
       </div>
       <div class="footer-meta">
         <p>&copy; <span id="year">2026</span> Sip Society</p>
+        <a href="#top">Back to top</a>
       </div>
     </footer>
 
