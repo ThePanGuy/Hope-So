@@ -1121,8 +1121,105 @@ button:focus-visible {
 }
 
 .footer-meta {
-  padding: 28px 8% 40px;
+  padding: 14px 8% 40px;
   text-align: center;
+}
+
+.footer-contact {
+  padding: 36px 8% 8px;
+  text-align: center;
+}
+
+.footer-area {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Contact links (footer and contact page) */
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 32px;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.contact-links a:hover {
+  color: var(--gold);
+}
+
+.contact-links svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 1.3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contact-direct {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid #d6d4de;
+}
+
+.contact-direct h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.contact-direct p {
+  margin: 10px auto 24px;
+  max-width: 34rem;
+  color: var(--muted);
+  font-size: 15px;
+  font-style: italic;
+}
+
+.contact-direct .contact-email {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 1180px) {
+  .footer-contact .contact-email {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 620px) {
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 }
 
 .footer-meta p {
