@@ -1829,19 +1829,32 @@ button:focus-visible {
   color: #fff;
 }
 
-/* The image is the photo half of the brochure slide (960x1080), shown at its
-   own aspect ratio; the slant follows the brochure's gold line. */
+/* Four photos in a 2x2 grid, cut by the same slant as the home hero: the box
+   is the line colour, and the grid is clipped a few pixels short of it, so
+   the line and the gaps between photos both show it. */
+/* The ratio sets the minimum height; stretch lets the photo grow when the
+   copy beside it is taller, instead of leaving a green gap underneath. */
 .slant-photo {
+  aspect-ratio: 960 / 1080;
+  align-self: stretch;
   background: var(--gold);
   clip-path: polygon(0 0, 77.2% 0, 100% 100%, 0 100%);
 }
 
-.slant-photo img {
+.slant-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 4px;
+  height: 100%;
+  clip-path: polygon(0 0, calc(77.2% - 4px) 0, calc(100% - 4px) 100%, 0 100%);
+}
+
+.slant-grid img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: left top;
-  clip-path: polygon(0 0, 76.8% 0, 99.6% 100%, 0 100%);
+  filter: grayscale(1);
 }
 
 .slant-copy {
@@ -1896,8 +1909,9 @@ button:focus-visible {
   background: var(--green);
 }
 
-/* The photo is the 960x1080 brochure slide, green and gold line included.
-   The box keeps that ratio so the clip follows the line in the picture. */
+/* The slanted edge is drawn here, not in the photo: the box is gold and the
+   photo is clipped a few pixels short of it, so the line stays put at any
+   screen shape. */
 .hero-slant {
   position: absolute;
   top: 0;
@@ -1912,8 +1926,8 @@ button:focus-visible {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: left top;
-  clip-path: polygon(0 0, 76.8% 0, 99.6% 100%, 0 100%);
+  object-position: center 40%;
+  clip-path: polygon(0 0, calc(77.2% - 4px) 0, calc(100% - 4px) 100%, 0 100%);
 }
 
 /* keeps the white nav legible where it crosses the bright photo */
