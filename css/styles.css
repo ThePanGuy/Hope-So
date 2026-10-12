@@ -152,6 +152,10 @@ h2.dash::after {
   min-height: 78vh;
 }
 
+.hero-legal {
+  min-height: max(56vh, 520px);
+}
+
 .hero-photo {
   position: absolute;
   inset: 0;
@@ -1065,72 +1069,362 @@ button:focus-visible {
   text-align: center;
 }
 
+.form-privacy {
+  margin: -0.4rem 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+.form-privacy a {
+  color: inherit;
+  text-underline-offset: 2px;
+}
+
+.form-privacy a:hover {
+  color: var(--gold);
+}
+
+/* Privacy policy */
+
+.legal {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 64px 22px 88px;
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.legal-updated {
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.legal h2 {
+  margin: 44px 0 10px;
+  font-family: var(--serif);
+  font-size: 1.7rem;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.legal a {
+  color: var(--gold-deep);
+  text-underline-offset: 2px;
+}
+
+.legal ul {
+  padding-left: 1.2rem;
+}
+
+.legal li + li {
+  margin-top: 6px;
+}
+
+.legal-details {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 6px 24px;
+  margin: 20px 0 0;
+  padding: 18px 22px;
+  background: var(--form);
+  font-size: 15px;
+}
+
+.legal-details dt {
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 2.2;
+  text-transform: uppercase;
+}
+
+.legal-details dd {
+  margin: 0;
+}
+
+@media (max-width: 620px) {
+  .legal-details {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .legal-details dd + dt {
+    margin-top: 10px;
+  }
+}
+
 /* Footer */
 
 .site-footer {
-  color: var(--ink);
+  background: var(--ink);
+  color: #fff;
 }
 
 .footer-cta {
   padding: 78px 8% 70px;
-  background: var(--ink);
-  color: #fff;
+  background: var(--green);
   text-align: center;
 }
 
 .footer-cta h2 {
   margin: 0;
+  color: var(--banana);
   font-family: var(--serif);
   font-size: clamp(2.1rem, 4vw, 2.75rem);
   font-style: italic;
   font-weight: 500;
 }
 
-.footer-nav {
+.footer-main {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 1px;
-  background: var(--line);
-  border-top: 1px solid var(--line);
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.5fr) minmax(0, 0.7fr) minmax(0, 0.7fr);
+  gap: 40px;
+  padding: 64px 8% 56px;
 }
 
-.footer-nav a {
-  display: grid;
-  gap: 8px;
-  padding: 32px 26px 36px;
-  background: #fff;
-  text-decoration: none;
+.footer-brand img {
+  width: 150px;
+  height: auto;
 }
 
-.footer-nav strong {
-  color: var(--gold);
+.footer-brand p {
+  margin: 18px 0 0;
+  max-width: 20rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.footer-label {
+  margin: 0 0 18px;
+  color: var(--banana);
   font-family: var(--sans);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
-.footer-nav span,
-.footer-meta {
-  color: var(--muted);
-  font-family: var(--body);
+.footer-col ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-contact a,
+.footer-nav a {
+  color: #fff;
+  font-family: var(--sans);
   font-size: 14px;
-  font-style: italic;
-  font-weight: 300;
+  text-decoration: none;
+}
+
+.footer-contact a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 28px;
+  overflow-wrap: anywhere;
+}
+
+.footer-contact a:hover,
+.footer-nav a:hover,
+.footer-nav a[aria-current="page"] {
+  color: var(--banana);
+}
+
+.footer-contact svg,
+.footer-social svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 1.3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.footer-col .footer-social {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-social a {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+}
+
+.footer-social svg {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-social a:hover {
+  border-color: var(--gold);
+  background: var(--gold);
+}
+
+.footer-social a:hover svg {
+  stroke: #fff;
 }
 
 .footer-meta {
-  padding: 28px 8% 40px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 8% 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.6);
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.08em;
 }
 
 .footer-meta p {
-  margin: 0.2rem 0;
+  margin: 0;
 }
 
 .footer-meta a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-meta a:hover {
+  color: var(--banana);
+}
+
+@media (max-width: 1000px) {
+  .footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .footer-main {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+    padding: 40px 22px 34px;
+  }
+
+  .footer-brand img {
+    width: 112px;
+  }
+
+  .footer-brand p {
+    margin-top: 12px;
+  }
+
+  .footer-label {
+    margin-bottom: 12px;
+  }
+
+  .footer-col ul {
+    gap: 6px;
+  }
+
+  .footer-col.footer-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+  }
+
+  .footer-meta {
+    padding-inline: 22px;
+  }
+}
+
+/* Contact page: direct links */
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 32px;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.contact-links a:hover {
   color: var(--gold);
+}
+
+.contact-links svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 1.3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contact-direct {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid #d6d4de;
+}
+
+.contact-direct h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.contact-direct p {
+  margin: 10px auto 24px;
+  max-width: 34rem;
+  color: var(--muted);
+  font-size: 15px;
+  font-style: italic;
+}
+
+.contact-direct .contact-email {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 620px) {
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -1150,7 +1444,6 @@ button:focus-visible {
   .split,
   .offer-grid,
   .preview-grid,
-  .footer-nav,
   .gallery {
     grid-template-columns: 1fr;
   }
@@ -1536,19 +1829,32 @@ button:focus-visible {
   color: #fff;
 }
 
-/* The image is the photo half of the brochure slide (960x1080), shown at its
-   own aspect ratio; the slant follows the brochure's gold line. */
+/* Four photos in a 2x2 grid, cut by the same slant as the home hero: the box
+   is the line colour, and the grid is clipped a few pixels short of it, so
+   the line and the gaps between photos both show it. */
+/* The ratio sets the minimum height; stretch lets the photo grow when the
+   copy beside it is taller, instead of leaving a green gap underneath. */
 .slant-photo {
+  aspect-ratio: 960 / 1080;
+  align-self: stretch;
   background: var(--gold);
   clip-path: polygon(0 0, 77.2% 0, 100% 100%, 0 100%);
 }
 
-.slant-photo img {
+.slant-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 4px;
+  height: 100%;
+  clip-path: polygon(0 0, calc(77.2% - 4px) 0, calc(100% - 4px) 100%, 0 100%);
+}
+
+.slant-grid img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: left top;
-  clip-path: polygon(0 0, 76.8% 0, 99.6% 100%, 0 100%);
+  filter: grayscale(1);
 }
 
 .slant-copy {
@@ -1603,8 +1909,9 @@ button:focus-visible {
   background: var(--green);
 }
 
-/* The photo is the 960x1080 brochure slide, green and gold line included.
-   The box keeps that ratio so the clip follows the line in the picture. */
+/* The slanted edge is drawn here, not in the photo: the box is gold and the
+   photo is clipped a few pixels short of it, so the line stays put at any
+   screen shape. */
 .hero-slant {
   position: absolute;
   top: 0;
@@ -1619,8 +1926,8 @@ button:focus-visible {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: left top;
-  clip-path: polygon(0 0, 76.8% 0, 99.6% 100%, 0 100%);
+  object-position: center 40%;
+  clip-path: polygon(0 0, calc(77.2% - 4px) 0, calc(100% - 4px) 100%, 0 100%);
 }
 
 /* keeps the white nav legible where it crosses the bright photo */
